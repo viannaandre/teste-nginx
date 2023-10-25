@@ -1,0 +1,22 @@
+services:
+  web:
+    image: nginx
+    container_name: servidor-web
+    ports:
+      - 8085:80
+    working_dir: /app
+    volumes:
+      - './:/app'
+      - './html:/usr/share/nginx/html/'
+    env_file:
+      - web.env
+    
+  database:
+    image: postgres
+    env_file:
+      - database.env
+    volumes:
+      - database-data:/var/lib/postgresql/data
+      
+volumes:
+  database-data:
