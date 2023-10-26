@@ -14,7 +14,7 @@ import time
 #Criando a logica para Scrapping
 modem0 = "http://192.168.15.1/login.asp"
 #modem1="http://192.168.15.1/settings-local-network.asp"
-senha = ['admin', 'nkw7qfwn']
+senha = ['lixo', 'lixo']
 userpass = senha[0] + ':' + senha[1]
 encoded_u = base64.b64encode(userpass.encode()).decode()
 id_secret_bytes = bytes(userpass, "UTF-8")
